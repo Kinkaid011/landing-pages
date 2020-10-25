@@ -1,0 +1,399 @@
+@import 'base';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.container {
+    max-width: 768px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+
+header {
+    background-color: $light-blue;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .25fr 1fr 1fr;
+    overflow: hidden;
+}
+
+nav {
+    height: 75px;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $light-blue;
+    color: $offwhite;
+    grid-column: 1/ span 3;
+
+    span {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .brand {
+        height: 27px;
+        position: relative;
+        top: 5px;
+    
+        img {
+            height: 27px;
+        }
+    }
+
+    .menu {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+
+    .line {
+        height: 60px;
+    }
+}
+
+.hero-caption {
+    color: $offwhite;
+    max-width: 250px;
+    font-size: 18px;
+    grid-column: 1/ span 3;
+    justify-self: center;
+    align-self: center;
+
+    p {
+        font-weight: 300;
+    }
+
+    h1 {
+        font-weight: 800;
+        margin: 0;
+    }
+
+    button {
+        background-color: $dark-blue;
+        color: $offwhite;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 5px 15px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+
+.hero-img {
+    position: absolute;
+    width: 550px;
+    bottom: 100px;
+    right: -50px;
+}
+
+.water-mark {
+    display: none;
+}
+
+section {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+
+    .bubble {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        height: 100px;
+    }
+
+}
+
+.product-caption {
+    grid-column: 1;
+    display: inline-block;
+    position: relative;
+    align-self: center;
+    left: 50px;
+
+    p {
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-weight: 800;
+        margin: 5px 0;
+    }
+
+    .sale {
+        color: $sale;
+    }   
+}
+
+.product-img {
+    grid-column: 1/ span 2;
+    grid-row: 2;
+    position: relative;
+    align-self: start;
+
+    .gradient-bubble {
+        height: 250px;
+        display: block;
+        margin: auto;
+    }
+
+    .hero-sm {
+        position: absolute;
+        bottom: 0px;
+        left: 7%;
+        width: 350px;
+    }
+
+    .tag {
+        display: inline-block;
+        background-color: $sale;
+        color: white;
+        padding: 2px 15px;
+        margin: 0;
+        border-radius: 5px;
+        position: absolute;
+        left: 15%;
+        font-size: .75em;
+
+    }
+}
+
+.sm-bubble {
+    display: none;
+}
+
+.md-bubble {
+    display: none;
+}
+
+.lg-bubble {
+    display: none;
+}
+
+.popular-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    position: relative;
+    margin-bottom: 25px;
+
+    .title {
+        grid-column: 1 /span 2;
+        justify-self: center;
+        padding-bottom: 10px;
+        border-bottom: 2px solid black;
+    }
+}
+
+
+.item1, .item2 {
+    position: relative;
+    grid-column: 1 /span 2;
+    justify-self: center;
+
+    h1 {
+        margin: 2px 0;
+        font-size: 1.2em;
+    }
+
+    .discount {
+        display: inline-block;
+        background-color: $sale;
+        color: white;
+        margin: 0;
+        padding: 2px 20px;
+        font-size: .75rem;
+        position: absolute;
+        top: 25px;
+    }
+
+    .muted {
+        color: gray;
+        font-weight: 400;
+    }
+
+    .new-price {
+        color: $sale;
+        margin-top: 15px;
+    }
+
+    .old-price {
+        color: gray;
+        text-decoration: line-through;
+        font-weight: 400;
+    }
+}
+
+hr {
+    max-width: 768px;
+    margin: auto;
+}
+
+footer {
+    max-width: 768px;
+    text-align: center;
+    margin: auto;
+    height: 100px;
+    padding-top: 25px;
+
+    p {
+        margin: 0;
+    }
+}
+ 
+
+@media (min-width: 768px) {
+
+    header {
+        height: 700px;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .water-mark {
+        display: block;
+        position: absolute;
+        top: 100px;
+        width: 775px;
+        transform: scaleY(1.5);
+        opacity: 0.75;
+    }
+
+    .hero-img {
+        position: absolute;
+        width: 700px;
+        right: 0;
+        bottom: 10px;
+    }
+
+    .hero-caption {
+        grid-column: 1/ span 2; 
+    }
+
+        
+    .feature {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .55fr 1fr;
+        height: 700px;
+
+        .bubble {
+            position: absolute;
+            top: 55px;
+            left: 80px;
+            height: 100px;
+        }
+
+    }
+
+    .product-caption {
+        grid-column: 1;
+        display: inline-block;
+        position: relative;
+        align-self: center;
+        justify-self: center;
+        left: 0;
+        top: 30px;  
+    }
+
+    .product-img {
+        align-self: start;
+
+        .gradient-bubble {
+            height: 350px;
+            display: block;
+            margin: 0 0 0 auto;
+            padding-right: 100px;
+        }
+
+        .hero-sm {
+            position: absolute;
+            bottom: 0px;
+            left: 38%;
+            width: 400px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: $sale;
+            color: white;
+            padding: 2px 15px;
+            margin: 0;
+            border-radius: 5px;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            font-size: .75em;
+
+        }
+    }
+
+    .popular-list {
+        width: 532px;
+        margin: auto;
+    }
+
+    .item1 {
+        grid-column: 1;
+    }
+
+    .item2 {
+        grid-column: 2;
+    }
+
+    .sm-bubble {
+        display: block;
+        position: absolute;
+        width: 150px;
+        top: 0px;
+        left: 50px;
+        z-index: -1;
+    }
+    
+    .md-bubble {
+        display: block;
+        position: absolute;
+        bottom: 350px;
+        left: 70px;
+        z-index: -1;
+    }
+    
+    .lg-bubble {
+        display: block;
+        width: 250px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+}
