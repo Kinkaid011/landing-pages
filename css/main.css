@@ -51,6 +51,10 @@ nav {
   grid-column: 1/ span 3;
 }
 
+nav img {
+  cursor: pointer;
+}
+
 nav span {
   font-size: 1.2rem;
   font-weight: 300;
@@ -95,6 +99,10 @@ nav .menu {
 
 .social-media .line {
   height: 60px;
+}
+
+.social-media .social-media img {
+  cursor: pointer;
 }
 
 .hero-caption {
@@ -263,6 +271,7 @@ section .bubble {
   grid-column: 1 /span 2;
   -ms-grid-column-align: center;
       justify-self: center;
+  cursor: pointer;
 }
 
 .item1 h1, .item2 h1 {
